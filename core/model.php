@@ -111,7 +111,7 @@
 			$fields="*";
 			$inner=" ";
 			$condition="1=1";
-			$order="IdPays";
+			$order="id";
 			$limit=" ";
 			
 			if (isset($data["fields"])) {

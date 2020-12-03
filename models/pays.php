@@ -10,7 +10,7 @@ class pays extends Model {
 	}
 	function getPa($id) {
 		return $this->findfirst(array(
-			"condition"=> 'IdPays='.$id
+			"condition"=> 'id='.$id
 		));
 	}
 	

@@ -5,7 +5,7 @@
 	// print_r($cats); 
 	// echo "</PRE>";	
 
-	echo '  id : '.$pa->IdPays.'</th>';
+	echo '  id : '.$pa->id.'</th>';
 	echo '  nom Pays wsh : '.$pa->NomPays.'</th>';
 	?>
   </tbody>

@@ -9,7 +9,7 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">IdPays</th>
+      <th scope="col">id</th>
       <th scope="col">NomPays</th>
       <th scope="col"></th>
     </tr>
@@ -18,8 +18,8 @@
 	<?php 
 	foreach ($pa as $p){
 		echo "<tr>";
-		echo '  <th scope="row">'.$p->IdPays.'</th>';
-		echo '  <td><a href="/'.WEBROOT2.'/accueil/view/'.$p->IdPays.'">'.$p->NomPays.'</a></td>';
+		echo '  <th scope="row">'.$p->id.'</th>';
+		echo '  <td><a href="/'.WEBROOT2.'/accueil/view/'.$p->id.'">'.$p->NomPays.'</a></td>';
 		echo '  <td></td>';
 		echo '</tr>';
 	}

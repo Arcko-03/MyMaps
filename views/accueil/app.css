@@ -3,25 +3,30 @@
 }
 
 .map__image path{
-	fill: #77e653;
-	stroke: #ffeae3;
-	stroke-width: 1px;
+	fill: #119DA4;
+	stroke: black;
+	stroke-width: 0.9px;
 	transition: fill 0.3s;
 }
 
 .map__image path:hover{
-	fill: #d1ffc2;
+	fill: #FFC857;
 }
 
 body{
-	background-color: white;
+	background-color: #4B3F72;
 }
 
 
 #map{
 	width: 1515px;
-	height: 700px;
+	height: 690px;
+	margin-top: 2px;
 	/*border: 1px;*/
 	/*background-color: #f5f5f5;*/
 
+}
+
+.navig{
+font-family: 'Chewy', cursive;
 }

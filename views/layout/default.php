@@ -10,12 +10,14 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="views/accueil/app.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
 
 		<title>My Maps</title>
 	</head>
-	<body>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		  <a class="navbar-brand" href="#">MyMaps</a>
+	<body style="background-color: #2E3E55;">
+		<nav class="navbar navbar-expand-lg navbar-light navig" style="background-color: #19647E; font-size: 20px">
+		  <!-- <a class="navbar-brand" href="#">MyMaps</a> -->
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		  </button>
@@ -29,8 +31,11 @@
 				<a class="nav-link" href="/<?=WEBROOT2?>/lieus">vue test</a>
 			  </li>
 			</ul>
+			<div class="navbar-brand" style="width:50%; font-size: 30px">
+				  MY MAPS
+				</div>
 			<form class="form-inline my-2 my-lg-0" action="/<?=WEBROOT2?>/users">
-			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-users"></i></button>
+			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><span style=""><i class="fas fa-users"></i></span></button>
 			</form>
 		  </div>
 		</nav>

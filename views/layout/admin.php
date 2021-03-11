@@ -29,7 +29,7 @@
 			  </li>
 			 </ul>
 			<form class="form-inline my-2 my-lg-0" action="/<?=WEBROOT2?>/users/logout">
-			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-user-alt-slash"></i></i></button>
+			  <button class="btn btn-outline-light" type="submit"><i class="fas fa-user-alt-slash"></i></i></button>
 			</form>
 		  </div>
 		</nav>

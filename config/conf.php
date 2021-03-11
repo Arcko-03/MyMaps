@@ -5,7 +5,7 @@ class conf{
 			'host' =>	 	'localhost',
 			'database' =>	'infovoyage',
 			'login' =>		'root',
-			'password' =>	''
+			'password' =>	'root'
 		)
 	);
 }

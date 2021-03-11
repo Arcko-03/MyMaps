@@ -15,8 +15,8 @@
 
 		<title>My Maps</title>
 	</head>
-	<body style="background-color: #d6d9ff;">
-		<nav class="navbar navbar-expand-lg navbar-light navig" style="background-color: #19647E; font-size: 20px">
+	<body style="background-color: #FFE1A8;">
+		<nav class="navbar navbar-expand-lg navbar-light navig" style="background-color: #1C5253; font-size: 20px">
 		  <!-- <a class="navbar-brand" href="#">MyMaps</a> -->
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
 				  MY MAPS
 				</div>
 			<form class="form-inline my-2 my-lg-0" action="/<?=WEBROOT2?>/users">
-			  <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><span style=""><i class="fas fa-users"></i></span></button>
+				<button class="btn btn-outline-light " type="submit"><i class="fas fa-users" ></i></button>
 			</form>
 		  </div>
 		</nav>

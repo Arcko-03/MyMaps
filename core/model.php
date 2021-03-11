@@ -148,7 +148,9 @@
 			if ($stmt->execute()) {
 				$data = $stmt->fetchAll(PDO::FETCH_OBJ);
 				// echo "<PRE>";
+				// echo "find: ";
 				// print_r($data);
+				// echo "fin find";
 				// echo "</PRE>";
 				return $data;
 			} else {

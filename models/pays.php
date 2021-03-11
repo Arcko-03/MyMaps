@@ -14,6 +14,10 @@ class pays extends Model {
 			"inner"=> 'INNER JOIN lieu ON lieu.idP = pays.id',
 		));
 	}
-	
+	function getPaEmptyLieu($id) {
+		return $this->find(array(
+			"condition"=> 'id='.$id,
+		));
+	}
 }
 ?>

@@ -3,18 +3,18 @@
 }
 
 .map__image path{
-	fill: #119DA4;
-	stroke: black;
+	fill: #1C5253;
+	stroke: #FFE1A8;
 	stroke-width: 0.9px;
 	transition: fill 0.3s;
 }
 
 .map__image path:hover{
-	fill: #FFC857;
+	fill: #E26D5C;
 }
 
 body{
-	background-color: #d6d9ff;
+	background-color: #FFE1A8;
 }
 
 
@@ -22,7 +22,8 @@ body{
 	width: 1515px;
 	height: 690px;
 	margin-top: 2px;
-
+	/*border: 1px;*/
+	/*background-color: #f5f5f5;*/
 
 }
 

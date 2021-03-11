@@ -2,7 +2,7 @@
 class lieu extends Model {
 	var $table="lieu";
 	
-	function getLast($num=99) {
+	function getLastLieu($num=99) {
 		return $this->find(array(
 			"order"=> 'IdLieu',
 			"limit"=> 'LIMIT '.$num

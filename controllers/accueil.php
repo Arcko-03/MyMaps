@@ -15,14 +15,15 @@ function index() {
 		//je rend la vue index
 		$this->render('index');
 	}
+
+	
 	function view($id) {
 		//$this->category = $this->loadModel('category');
 		$d['pa']= $this->pays->getPa("'".$id."'");
 		$d['titre']= "Lieux à visiter en ";
-		
-		
 		$this->set($d);
 		
+
 		//je rend la vue view
 		$this->render('view');
 	}

@@ -16,7 +16,7 @@
 		<title>My Maps</title>
 	</head>
 	<body style="background-color: #FFE1A8;">
-		<nav class="navbar navbar-expand-lg navbar-light navig" style="background-color: #1C5253; font-size: 20px">
+		<nav class="navbar navbar-expand-lg navbar-light navig" style="background-color: #1C5253; font-size: 20px; font-family: 'Chewy', cursive; color: white;">
 		  <!-- <a class="navbar-brand" href="#">MyMaps</a> -->
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -28,11 +28,11 @@
 				<a class="nav-link" href="/<?=WEBROOT2?>">Accueil <span class="sr-only">(current)</span></a>
 			  </li>
 			  <li class="nav-item">
-				<a class="nav-link" href="/<?=WEBROOT2?>/lieus">vue test</a>
+				<a class="nav-link" href="/<?=WEBROOT2?>/lieus">Tous les pays</a>
 			  </li>
 			</ul>
 			<div class="navbar-brand" style="width:50%; font-size: 30px">
-				  MY MAPS
+				  <a href="/<?=WEBROOT2?>"><img src="/<?=WEBROOT2?>/webroot/img/logohorizontal.png" width="165px"></a>
 				</div>
 			<form class="form-inline my-2 my-lg-0" action="/<?=WEBROOT2?>/users">
 				<button class="btn btn-outline-light " type="submit"><i class="fas fa-users" ></i></button>

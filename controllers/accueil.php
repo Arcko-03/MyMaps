@@ -15,6 +15,31 @@ function index() {
 		//je rend la vue index
 		$this->render('index');
 	}
+	function adminindex() {
+	//je rend la vue index
+		//echo 'function index';
+		$d=array();
+		$d['pa']= $this->pays->getLastP();
+		$d['titre']= "Carte du monde";
+		
+		$this->set($d);
+		$this->layout='admin';
+		//je rend la vue index
+		$this->render('adminindex');
+	}
+	function userindex() {
+	//je rend la vue index
+		//echo 'function index';
+		$d=array();
+		$d['pa']= $this->pays->getLastP();
+		$d['titre']= "Carte du monde";
+		
+		$this->set($d);
+		$this->layout='user';
+		//je rend la vue index
+		$this->render('userindex');
+	}
+
 
 
 	function view($id) {
@@ -41,4 +66,7 @@ function index() {
 		$this->render('view');
 	}
 }
+
+
+
 ?>

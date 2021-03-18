@@ -22,11 +22,17 @@ class users extends controller {
 		
 		$this->set($d);
 		//Si login et mdp ok cad si on est logué
-		if ($this->Session->isLogged()) {
+		if ($this->Session->isLogged() && $this->Session->isAdmin() == 'admin') {
 			$this->layout='admin';
 			//vue page accueil back office
 			$this->render('loginok');
-		} else {
+		} 
+		elseif ($this->Session->isLogged() && $this->Session->isAdmin() == 'user') {
+			$this->layout='user';
+			//vue page accueil back office
+			$this->render('loginok');
+		}
+		else {
 			//vue formulaire vierge de connection
 			$this->render('index');
 		}

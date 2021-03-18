@@ -45,6 +45,10 @@ class Session{
 	public function isLogged() {
 	   return isset($_SESSION['User']->nom);
 	}
+    public function isAdmin() {
+     return $_SESSION['User']->role;
+  }
+
 
 	//methode pour lire la valeur du user
 	public function user($key) {

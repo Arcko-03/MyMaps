@@ -12,7 +12,9 @@
 		echo '<div class="col-sm">'.$p->UserNote.'</div>';
 		echo '</div>';
 		echo '</div><br><br>';
+
 		}
+
 	}
 	else{
 		echo "<br>";

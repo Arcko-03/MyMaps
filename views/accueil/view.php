@@ -10,6 +10,7 @@
 		echo '<div class="col-sm">'.$p->NomLieu.'</div>';
 		echo '<div class="col-sm">'.$p->Description.'</div>';
 		echo '<div class="col-sm">'.$p->UserNote.'</div>';
+		echo '<a href="/'.WEBROOT2.'/article/view"></a>';
 		echo '</div>';
 		echo '</div><br><br>';
 

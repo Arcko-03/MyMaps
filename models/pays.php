@@ -10,8 +10,9 @@ class pays extends Model {
 	}
 	function getPa($id) {
 		return $this->find(array(
-			"condition"=> 'id='.$id,
+			"condition"=> 'pays.id='.$id,
 			"inner"=> 'INNER JOIN lieu ON lieu.idP = pays.id',
+			"order"=> 'lieu.id'
 		));
 	}
 	function getPaEmptyLieu($id) {

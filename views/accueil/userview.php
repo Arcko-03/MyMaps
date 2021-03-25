@@ -8,8 +8,9 @@
 		echo "<div class='row'>";
 		echo '<div class="col-sm"><img src="/'.WEBROOT2.'/webroot/img/'.$p->Image.'" width= 300px/></div>';
 		echo '<div class="col-sm">'.$p->NomLieu.'</div>';
-		echo '<div class="col-sm">'.$p->Description.'</div>';
+		echo '<div class="col-sm" style="text-overflow: ellipsis;">'.$p->Description.'</div>';
 		echo '<div class="col-sm">'.$p->UserNote.'</div>';
+		echo '<div class="col-sm"><a href="/'.WEBROOT2.'/lieus/view/'.$p->id.'">En savoir plus</a></div>';
 		echo '</div>';
 		echo '</div><br><br>';
 

@@ -13,6 +13,7 @@ class lieu extends Model {
 	function getLieu($id) {
 		return $this->findfirst(array(
 			"condition"=> 'id='.$id
+			
 		));
 	}
 

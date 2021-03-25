@@ -1,4 +1,9 @@
-<h1>Admin version</h1>
+	
+
+
+		<script type="text/javascript"src="../dist/svg-pan-zoom.js"></script>
+		<link rel="stylesheet" type="text/css" href="../views/accueil/app.css">
+
 
 		<div class="map__image">
 		<svg id="map" viewBox="0 0 1080 720" xmlns="http://www.w3.org/2000/svg" xmlns:amcharts="http://amcharts.com/ammap" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" >

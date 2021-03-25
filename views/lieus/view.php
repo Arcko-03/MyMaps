@@ -4,10 +4,10 @@
 	// echo "<PRE>";
 	// print_r($cats); 
 	// echo "</PRE>";	
-	echo '  id : '.$lieu->idLieu.'</th>';
-	echo '  nom lieu : '.$lieu->NomLieu.'</th>';
-	echo ' description :'.$lieu->Description.'</th>';
-	echo '  Image : '.$lieu->Image.'</th>';
+	echo '  id : '.$li->id.'</th>';
+	echo '  nom lieu : '.$li->NomLieu.'</th>';
+	echo ' description :'.$li->Description.'</th>';
+	echo '  Image : '.$li->Image.'</th>';
 	?>
   </tbody>
 </table>

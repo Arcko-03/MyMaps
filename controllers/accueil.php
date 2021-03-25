@@ -65,6 +65,30 @@ function index() {
 		//je rend la vue view
 		$this->render('view');
 	}
+
+	function userview($id) {
+		//$this->category = $this->loadModel('category');
+		$d['pa']= $this->pays->getPa("'".$id."'");
+		$d['titre']= "Lieux à visiter en ";
+
+		if (empty($d['pa'])) {
+			$d['pa']= $this->pays->getPaEmptyLieu("'".$id."'");
+			$d['titre']= "Il n'y a encore aucun lieu à visiter en ".$d['pa'][0]->NomPays;
+			$d['empty']= 'true';
+		}
+		else{
+			$d['pa']= $this->pays->getPa("'".$id."'");
+			$d['titre']= "Lieux à visiter en ".$d['pa'][0]->NomPays;
+			$d['empty']= 'false';
+		}
+
+
+		$this->set($d);
+		$this->layout='user';
+
+		//je rend la vue view
+		$this->render('userview');
+	}
 }
 
 

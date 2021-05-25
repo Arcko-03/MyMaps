@@ -9,4 +9,4 @@ My Maps est une carte interractive web du monde, avec des lieux à visiter par p
 
 
 Aperçu du projet:
-![alt text](https://github.com/kilianpelissier/MyMaps/blob/master/webroot/img/capture.png) 
+![alt text](https://github.com/kilianpelissier/MyMaps/blob/master/webroot/img/capture.PNG) 

@@ -35,9 +35,9 @@
 			$stmt = $this->db->prepare($sql);
 			if ($stmt->execute(array(':id'=> $this->id))) {
 				$data = $stmt->fetch(PDO::FETCH_OBJ);
-				echo "<PRE>";
+				/*echo "<PRE>";
 				print_r($data);
-				echo "</PRE>";
+				echo "</PRE>";*/
 				foreach ($data as $key=>$value){
 					//on peut créer "à la volée" les propriété de la classe
 					$this->$key = $value;
@@ -69,7 +69,7 @@
 				$values = substr($values, 0, -1); 
 				$sql.=") VALUES (".$values.")";
 				
-				echo $sql;
+				//echo $sql;
 				//prepare SQL
 				$stmt = $this->db->prepare($sql);
 				
@@ -93,7 +93,7 @@
 				$sql = substr($sql, 0, -1); 
 				$sql.=" WHERE id=".$this->id;
 
-				echo $sql;
+				//echo $sql;
 				//préparation SQL
 				$sth = $this->db->prepare($sql);
 				
@@ -141,7 +141,7 @@
 					' WHERE '.$condition.
 					' ORDER BY '.$order.
 					' '.$limit;
-			echo $sql;
+			//echo $sql;
 			//préparation PDO
 			$stmt = $this->db->prepare($sql);
 			//chargement du résultat de la requete SQL en mémoire dans un curseur
@@ -161,14 +161,14 @@
 		//findfirst : lecture du premier enreg d'un find
 		function findFirst($data) {
 			 //retourne l'élément courant du tableau
-			 print_r($data);
+			 //print_r($data);
 			 return current($this->find($data));
 		}
 
 		function delete(){
 			/* Exécute une requête préparée en passant un tableau de valeurs */
 			$sql= 'DELETE FROM '.$this->table.' WHERE id=:id';
-			echo $sql;
+			//echo $sql;
 			//préparation PDO
 			$stmt = $this->db->prepare($sql);
 			if ($stmt->execute(array(':id'=> $this->id))) {

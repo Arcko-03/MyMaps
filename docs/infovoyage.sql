@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Mar 12, 2021 at 09:36 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Hôte : 127.0.0.1
+-- Généré le : mar. 25 mai 2021 à 12:51
+-- Version du serveur :  10.4.18-MariaDB
+-- Version de PHP : 7.4.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sn31q_infovoyage`
+-- Base de données : `infovoyage`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ajoute`
+-- Structure de la table `ajoute`
 --
 
 CREATE TABLE `ajoute` (
@@ -35,11 +35,11 @@ CREATE TABLE `ajoute` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `lieu`
+-- Structure de la table `lieu`
 --
 
 CREATE TABLE `lieu` (
-  `IdLieu` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `NomLieu` varchar(100) DEFAULT NULL,
   `Description` varchar(500) DEFAULT NULL,
   `Image` varchar(50) DEFAULT NULL,
@@ -48,10 +48,10 @@ CREATE TABLE `lieu` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `lieu`
+-- Déchargement des données de la table `lieu`
 --
 
-INSERT INTO `lieu` (`IdLieu`, `NomLieu`, `Description`, `Image`, `idP`, `UserNote`) VALUES
+INSERT INTO `lieu` (`id`, `NomLieu`, `Description`, `Image`, `idP`, `UserNote`) VALUES
 (1, 'Tour eiffel', 'La tour Eiffel est une tour de fer puddlé de 324 mètres de hauteur située à Paris, à l’extrémité nord-ouest du parc du Champ-de-Mars en bordure de la Seine dans le 7ᵉ arrondissement. Son adresse officielle est 5, avenue Anatole-France.', 'eiffel.jpg', 'FR', 5),
 (4, 'Mont saint michel', 'Le Mont-Saint-Michel est une commune française située dans le département de la Manche en Normandie. Elle tire son nom de l\'îlot rocheux consacré à saint Michel où s’élève aujourd’hui l’abbaye du Mont-Saint-Michel.', 'stmichel.jpg', 'FR', 4),
 (5, 'Musée du Louvre', 'Le musée du Louvre est un musée situé dans le 1ᵉʳ arrondissement de Paris, en France. Une préfiguration en est imaginée en 1775-1776 par le comte d\'Angiviller, directeur général des Bâtiments du roi, comme lieu de présentation des chefs-d\'œuvre de la collection de la Couronne.', 'louvre.jpg', 'FR', 5);
@@ -59,7 +59,7 @@ INSERT INTO `lieu` (`IdLieu`, `NomLieu`, `Description`, `Image`, `idP`, `UserNot
 -- --------------------------------------------------------
 
 --
--- Table structure for table `modifie`
+-- Structure de la table `modifie`
 --
 
 CREATE TABLE `modifie` (
@@ -70,7 +70,7 @@ CREATE TABLE `modifie` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pays`
+-- Structure de la table `pays`
 --
 
 CREATE TABLE `pays` (
@@ -79,7 +79,7 @@ CREATE TABLE `pays` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `pays`
+-- Déchargement des données de la table `pays`
 --
 
 INSERT INTO `pays` (`id`, `NomPays`) VALUES
@@ -336,7 +336,7 @@ INSERT INTO `pays` (`id`, `NomPays`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table`
+-- Structure de la table `table`
 --
 
 CREATE TABLE `table` (
@@ -345,7 +345,7 @@ CREATE TABLE `table` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table`
+-- Déchargement des données de la table `table`
 --
 
 INSERT INTO `table` (`COL 1`, `COL 2`) VALUES
@@ -602,7 +602,7 @@ INSERT INTO `table` (`COL 1`, `COL 2`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Structure de la table `user`
 --
 
 CREATE TABLE `user` (
@@ -616,59 +616,65 @@ CREATE TABLE `user` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `user`
+-- Déchargement des données de la table `user`
 --
 
 INSERT INTO `user` (`Id`, `login`, `nom`, `prenom`, `email`, `password`, `role`) VALUES
 (1, 'admin', 'admin', 'admin', 'admin@mail.com', '098f6bcd4621d373cade4e832627b4f6', 'admin'),
-(2, 'juju', 'dechau', 'julien', 'juju@email.com', '0348dcd774a2892097b9d5c84ce882d3', 'test');
+(2, 'user', 'user', 'bob', 'user@test.fr', '098f6bcd4621d373cade4e832627b4f6', 'user');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `ajoute`
+-- Index pour la table `ajoute`
 --
 ALTER TABLE `ajoute`
   ADD PRIMARY KEY (`IdLieu`,`IdUtilisateur`),
   ADD KEY `IdUtilisateur` (`IdUtilisateur`);
 
 --
--- Indexes for table `lieu`
+-- Index pour la table `lieu`
 --
 ALTER TABLE `lieu`
-  ADD PRIMARY KEY (`IdLieu`),
+  ADD PRIMARY KEY (`id`),
   ADD KEY `idP` (`idP`);
 
 --
--- Indexes for table `modifie`
+-- Index pour la table `modifie`
 --
 ALTER TABLE `modifie`
   ADD PRIMARY KEY (`IdLieu`,`IdUtilisateur`),
   ADD KEY `IdUtilisateur` (`IdUtilisateur`);
 
 --
--- Indexes for table `pays`
+-- Index pour la table `pays`
 --
 ALTER TABLE `pays`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Index pour la table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`Id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `lieu`
+-- AUTO_INCREMENT pour la table `lieu`
 --
 ALTER TABLE `lieu`
-  MODIFY `IdLieu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT pour la table `user`
+--
+ALTER TABLE `user`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

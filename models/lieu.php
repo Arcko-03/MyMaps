@@ -16,6 +16,13 @@ class lieu extends Model {
 			
 		));
 	}
+	function getPays($id) {
+		return $this->findfirst(array(
+			"condition"=> 'IdP='.$id,
+			"inner"=> 'INNER JOIN pays ON lieu.idP = pays.id',
+			"order"=> 'IdP',
+		));
+	}
 
 	function deleteLieu($id){
 		$this->id=$id;

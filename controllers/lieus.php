@@ -32,6 +32,31 @@ class lieus extends controller {
 		$this->render('view');
 		
 	}
+		function userview($id) {
+		//$this->category = $this->loadModel('category');
+		$d['li']= $this->lieu->getLieu($id);
+		$d['titre']= "Détail lieu";
+		
+		$this->set($d);
+		
+		//je rend la vue view
+		$this->layout='user';
+		$this->render('userview');
+
+		
+	}
+		function adminview($id) {
+		//$this->category = $this->loadModel('category');
+		$d['li']= $this->lieu->getLieu($id);
+		$d['titre']= "Détail lieu";
+		
+		$this->set($d);
+		
+		//je rend la vue view
+		$this->layout='admin';
+		$this->render('adminview');
+		
+	}
 	function adminIndex() {
 		
 		if ($this->Session->isLogged()){
@@ -69,19 +94,50 @@ class lieus extends controller {
 				if(!empty($id)) {
 					//on remplit form 
 					//on récupère les données de mon id
-					$d['li'] =$this->lieu->getLieu($id);
+					$d['li'] =$this->lieu->getLieu("'".$id."'");
+					$d['pa'] =$this->lieu->getPays("'".$id."'");
 					// echo "<PRE>";
 					// print_r($d['cat']); 
 					// echo "</PRE>";
 				}
 				$this->set($d);
+
 				//on rend la vue --> adminedit
 				$this->render('adminedit');
 			}
 			
 		}
 	}
-	
+	function userEdit($id=null) {	
+			$this->layout='user';
+			if(!empty($_POST)) {
+				//on est en insert ou update et on affiche la liste
+				$this->lieu->save($_POST);
+				$this->Session->setFlash("Votre mise à jour a bien été prise en compte");
+				$d['li']=$this->lieu->getLast();
+				$d['titre'] ="Ajout lieus";
+				$this->set($d);
+				//on rend la vue --> adminindex
+				$this->render('userIndex');
+			} else {
+				$d=array();
+				//on remplit le formualire et on l'affiche
+				//si id renseigné
+				if(!empty($id)) {
+					//on remplit form 
+					//on récupère les données de mon id
+					$d['li'] =$this->lieu->getLieu("'".$id."'");
+					$d['pa'] =$this->lieu->getPays("'".$id."'");
+					// echo "<PRE>";
+					// print_r($d['cat']); 
+					// echo "</PRE>";
+				}
+				$this->set($d);
+				$this->layout='user';
+				//on rend la vue --> adminedit
+				$this->render('useredit');
+			}
+	}
 	function adminDelete($id) {
 		
 		if ($this->Session->isLogged()){

@@ -10,20 +10,21 @@
 		echo '<div class="col-sm">'.$p->NomLieu.'</div>';
 		echo '<div class="col-sm" style="text-overflow: ellipsis;">'.$p->Description.'</div>';
 		echo '<div class="col-sm">'.$p->UserNote.'</div>';
-		echo '<div class="col-sm"><a href="/'.WEBROOT2.'/lieus/view/'.$p->id.'">En savoir plus</a></div>';
+		echo '<div class="col-sm"><a href="/'.WEBROOT2.'/lieus/userview/'.$p->id.'">En savoir plus</a></div>';
 		echo '</div>';
 		echo '</div><br><br>';
 
 		}
 
-		echo "<br><center><a href=''><i class='fas fa-plus-circle fa-3x' ></i></a></center>";
+		echo "<br><center><a href=''/".WEBROOT2."/lieus/useredit'' style='color:#E26D5C;'><i class='fas fa-plus-circle fa-3x' ></i></a></center>";
 	}
 	else{
 		echo "<br>";
 		echo "<br>";
 		echo '<center><div class="col-sm"><img src="/'.WEBROOT2.'/webroot/img/juju.gif" width= 600px/></div></center>';
 		echo "<br>";
-		echo "<center><br><h1>Snif...</h1></center>";
+		echo "<center><h1>Soyez le premier à en enjouter un !</h1></center><br>";
+		echo "<br><center><a href='/".WEBROOT2."/lieus/useredit' style='color:#E26D5C;'><i class='fas fa-plus-circle fa-3x' ></i></a></center><br>";
 	}
 
 	?>

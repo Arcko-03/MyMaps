@@ -27,9 +27,6 @@
 			  <li class="nav-item active">
 				<a class="nav-link" href="/<?=WEBROOT2?>">Accueil <span class="sr-only">(current)</span></a>
 			  </li>
-			  <li class="nav-item">
-				<a class="nav-link" href="/<?=WEBROOT2?>/lieus">Tous les pays</a>
-			  </li>
 			</ul>
 			<div class="navbar-brand" style="width:50%; font-size: 30px">
 				  <a href="/<?=WEBROOT2?>"><img src="/<?=WEBROOT2?>/webroot/img/logohorizontal.png" width="165px"></a>
